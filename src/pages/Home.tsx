@@ -583,7 +583,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="space-y-4 sm:space-y-6">
-                {[{ icon: MapPin, title: 'العنوان', text: 'BAŞPINAR OSB MAH. GAZİANTEP' }, { icon: Phone, title: 'الهاتف', text: '+90 555 020 09 11', href: 'tel:+905550200911' }, { icon: Mail, title: 'البريد الإلكتروني', text: 'carpethome10@gmail.com', href: 'mailto:carpethome10@gmail.com' }].map((item, i) => (
+                {[{ icon: MapPin, title: 'العنوان', text: 'BAŞPINAR OSB' }, { icon: Phone, title: 'الهاتف', text: '+90 555 020 09 11', href: 'tel:+905550200911' }, { icon: Mail, title: 'البريد الإلكتروني', text: 'carpethome10@gmail.com', href: 'mailto:carpethome10@gmail.com' }].map((item, i) => (
                   <div key={i} className="flex gap-3 sm:gap-4 p-4 sm:p-6 glass-card rounded-2xl">
                     <div className="w-10 h-10 sm:w-14 sm:h-14 bg-gold/20 rounded-xl flex items-center justify-center flex-shrink-0"><item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-gold" /></div>
                     <div className="min-w-0"><h3 className="font-bold text-white mb-1 text-sm sm:text-base">{item.title}</h3>{item.href ? (<a href={item.href} className="text-gray-400 hover:text-gold transition-colors text-xs sm:text-sm break-all">{item.text}</a>) : (<p className="text-gray-400 text-xs sm:text-sm break-words">{item.text}</p>)}</div>
