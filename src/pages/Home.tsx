@@ -270,7 +270,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-3">
-              <a href="tel:+905550200911" className="hidden sm:flex items-center gap-2 px-4 py-2 bg-gold text-navy rounded-full font-semibold hover:bg-gold-light transition-colors">
+              <a href="tel:+905550200911" className="flex items-center gap-2 px-4 py-2 bg-gold text-navy rounded-full font-semibold hover:bg-gold-light transition-colors">
                 <Phone className="w-4 h-4" />
                 <span>اتصل الآن</span>
               </a>
@@ -652,10 +652,7 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* WHATSAPP BUTTON */}
-      <a href="https://wa.me/905550200911" target="_blank" rel="noopener noreferrer" className="whatsapp-float">
-        <MessageCircle className="w-7 h-7 text-white" />
-      </a>
+      
 
       {/* SCROLL TO TOP */}
       <AnimatePresence>
