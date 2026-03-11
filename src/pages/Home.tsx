@@ -284,7 +284,7 @@ export default function Home() {
 
 
       {/* ANNOUNCEMENT BAR */}
-      <div className="w-full bg-gradient-to-r from-navy via-gold/20 to-navy border-b border-gold/30 overflow-hidden py-2">
+      <div className="fixed top-16 left-0 right-0 z-40 w-full bg-gradient-to-r from-navy via-gold/20 to-navy border-b border-gold/30 overflow-hidden py-2">
         <div className="flex items-center">
           <motion.div
             animate={{ x: ['100vw', '-100%'] }}
@@ -340,7 +340,7 @@ export default function Home() {
         <img src={siteImages.hero_floating_2} loading="lazy" className="floating-carpet w-24 h-24 object-cover rounded-xl bottom-32 left-20 hidden lg:block" style={{ animationDelay: '2s' }} />
 
         <div className="relative z-10 min-h-screen flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-8 sm:py-24 lg:py-32">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="order-2 lg:order-1">
                 <div className="section-badge hidden sm:flex">
