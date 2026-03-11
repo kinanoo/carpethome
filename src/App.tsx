@@ -5,13 +5,13 @@ import Admin from './pages/Admin'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Toaster position="top-center" richColors />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
