@@ -253,7 +253,7 @@ export default function Home() {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3">
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('home')}>
               <img src="/logo.png" alt="كاربت هوم" className="h-12 w-12 rounded-full" />
               <div className="hidden sm:block">
                 <h1 className="text-white font-bold text-lg">كاربت هوم</h1>
@@ -320,8 +320,8 @@ export default function Home() {
 
         <div className="relative z-10 min-h-screen flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="order-2 lg:order-1">
                 <div className="section-badge">
                   <Award className="w-4 h-4" />
                   <span>صناعة السجاد على الطلب والذوق</span>
@@ -357,7 +357,7 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative block mt-8 lg:mt-0">
+              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative block order-1 lg:order-2">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-primary/20 rounded-3xl blur-3xl" />
                   <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover" />
