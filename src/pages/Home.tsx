@@ -360,7 +360,14 @@ export default function Home() {
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative block order-1 lg:order-2">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-primary/20 rounded-3xl blur-3xl" />
-                  <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="relative rounded-2xl lg:rounded-3xl shadow-2xl w-full h-[260px] sm:h-[360px] lg:h-[500px] object-cover ring-2 ring-gold/40" />
+                  <div className="relative lg:hidden">
+                    <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="rounded-2xl shadow-2xl w-full h-[180px] sm:h-[360px] object-cover ring-2 ring-gold/40" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl" style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.5) 100%)'}}>
+                      <span className="text-white font-bold text-xl drop-shadow-lg tracking-wide">كاربت هوم</span>
+                      <span className="text-gold font-semibold text-base drop-shadow-lg">بيت السجاد</span>
+                    </div>
+                  </div>
+                  <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="hidden lg:block rounded-3xl shadow-2xl w-full lg:h-[500px] object-cover ring-2 ring-gold/40" />
                   <div className="absolute -bottom-6 -right-6 glass-card p-4 flex items-center gap-3">
                     <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
                       <CheckCircle className="w-6 h-6 text-navy" />
@@ -701,7 +708,7 @@ export default function Home() {
                 {selectedProduct.images.map((img: any, index: number) => (
                   <button key={index} onClick={(e) => { e.stopPropagation(); setSelectedImageIndex(index); }} className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${selectedImageIndex === index ? 'border-gold scale-110' : 'border-transparent opacity-60 hover:opacity-100'}`}>
                     <img src={img.image_url || img} alt="" className="w-full h-full object-cover" />
-                  </button>
+                  </button>h
                 ))}
               </div>
             )}
