@@ -315,31 +315,31 @@ export default function Home() {
         <div className="hero-pattern" />
         <div className="hero-glow hero-glow-1" />
         <div className="hero-glow hero-glow-2" />
-        <img src={siteImages.hero_floating_1} loading="lazy" className="floating-carpet w-32 h-32 object-cover rounded-2xl top-20 right-10" style={{ animationDelay: '0s' }} />
-        <img src={siteImages.hero_floating_2} loading="lazy" className="floating-carpet w-24 h-24 object-cover rounded-xl bottom-32 left-20" style={{ animationDelay: '2s' }} />
+        <img src={siteImages.hero_floating_1} loading="lazy" className="floating-carpet w-32 h-32 object-cover rounded-2xl top-20 right-10 hidden lg:block" style={{ animationDelay: '0s' }} />
+        <img src={siteImages.hero_floating_2} loading="lazy" className="floating-carpet w-24 h-24 object-cover rounded-xl bottom-32 left-20 hidden lg:block" style={{ animationDelay: '2s' }} />
 
         <div className="relative z-10 min-h-screen flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-32">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="order-2 lg:order-1">
-                <div className="section-badge">
+                <div className="section-badge hidden sm:flex">
                   <Award className="w-4 h-4" />
                   <span>صناعة السجاد على الطلب والذوق</span>
                 </div>
                 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
                   اكتشف روعة
                   <span className="block mt-2 bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
                     أجود أنواع السجاد لدينا
                   </span>
                 </h1>
                 
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                <p className="hidden sm:block text-lg text-gray-300 mb-8 leading-relaxed">
                   من قلب غازي عنتاب، نقدم لكم أجود أنواع السجاد المصنوع 
                   بأيدي أمهر الحرفيين، بتصاميم تجمع بين الأصالة والعصرية.
                 </p>
 
-                <div className="flex flex-wrap gap-4 mb-10">
+                <div className="flex flex-wrap gap-3 mb-6 sm:mb-10">
                   <button onClick={() => scrollToSection('products')} className="btn-luxury">تصفح المنتجات</button>
                   <button onClick={() => setShowVideo(true)} className="btn-outline flex items-center gap-2">
                     <Play className="w-5 h-5" />
@@ -350,8 +350,8 @@ export default function Home() {
                 <div className="grid grid-cols-3 gap-6">
                   {[{ number: '+10', label: 'سنوات خبرة' }, { number: '+500', label: 'عميل سعيد' }, { number: '+200', label: 'تصميم فريد' }].map((stat, i) => (
                     <div key={i} className="text-center">
-                      <div className="text-2xl sm:text-3xl font-bold text-gold">{stat.number}</div>
-                      <div className="text-sm text-gray-400">{stat.label}</div>
+                      <div className="text-xl sm:text-3xl font-bold text-gold">{stat.number}</div>
+                      <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -360,7 +360,7 @@ export default function Home() {
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative block order-1 lg:order-2">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-primary/20 rounded-3xl blur-3xl" />
-                  <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="relative rounded-3xl shadow-2xl w-full h-[500px] object-cover" />
+                  <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="relative rounded-2xl lg:rounded-3xl shadow-2xl w-full h-[260px] sm:h-[360px] lg:h-[500px] object-cover ring-2 ring-gold/40" />
                   <div className="absolute -bottom-6 -right-6 glass-card p-4 flex items-center gap-3">
                     <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
                       <CheckCircle className="w-6 h-6 text-navy" />
