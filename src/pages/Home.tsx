@@ -743,7 +743,7 @@ export default function Home() {
                 {selectedProduct.images.map((img: any, index: number) => (
                   <button key={index} onClick={(e) => { e.stopPropagation(); setSelectedImageIndex(index); }} className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${selectedImageIndex === index ? 'border-gold scale-110' : 'border-transparent opacity-60 hover:opacity-100'}`}>
                     <img src={img.image_url || img} alt="" className="w-full h-full object-cover" />
-                  </button>h
+                  </button>
                 ))}
               </div>
             )}
