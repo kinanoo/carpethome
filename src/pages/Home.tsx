@@ -345,10 +345,7 @@ export default function Home() {
                 </div>
                 
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
-                  اكتشف روعة
-                  <span className="block mt-2 bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
-                    أجود أنواع السجاد لدينا
-                  </span>
+                  أجود أنواع السجاد
                 </h1>
                 
                 <p className="hidden sm:block text-lg text-gray-300 mb-8 leading-relaxed">
