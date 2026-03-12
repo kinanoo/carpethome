@@ -379,9 +379,9 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
               <img src={siteImages.about_main} alt="معمل السجاد" loading="lazy" className="rounded-3xl shadow-xl w-full h-[300px] sm:h-[400px] object-cover" />
-              <div className="absolute -bottom-4 right-4 sm:-bottom-8 sm:-left-8 bg-gold text-navy p-4 sm:p-6 rounded-2xl shadow-xl">
-                <div className="text-2xl sm:text-4xl font-bold">+10</div>
-                <div className="text-sm sm:text-base font-semibold">سنوات من التميز</div>
+              <div className="absolute -bottom-3 right-3 bg-gold text-navy p-2 px-3 rounded-xl shadow-xl">
+                <div className="text-lg font-bold">+10</div>
+                <div className="text-xs font-semibold">سنوات من التميز</div>
               </div>
             </motion.div>
 
