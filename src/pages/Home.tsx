@@ -16,7 +16,7 @@ import 'swiper/css/navigation'
 interface Product {
   id: string
   name_ar: string
-  name_en: string
+  name_en: stringh
   category: string
   is_active: boolean
   images?: { id: string; image_url: string; is_primary: boolean }[]
@@ -376,7 +376,7 @@ export default function Home() {
 
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative block order-1 lg:order-2">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-primary/20 rounded-3xl blur-3xl" />
+                  <div class="absolute -bottom-6 -left-6 glass-card p-2 flex items-center gap-2">
                   <div className="relative lg:hidden">
                     <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="rounded-2xl shadow-2xl w-full h-[100px] sm:h-[260px] object-cover ring-2 ring-gold/40" />
                     <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl" style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.5) 100%)'}}>
