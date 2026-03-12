@@ -339,11 +339,6 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8 sm:py-16 lg:py-20">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="order-2 lg:order-1">
-                <div className="section-badge hidden sm:flex">
-                  <Award className="w-4 h-4" />
-                  <span>صناعة السجاد على الطلب والذوق</span>
-                </div>
-                
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
                   أجود أنواع السجاد
                 </h1>
@@ -381,7 +376,6 @@ export default function Home() {
                     </div>
                   </div>
                   <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="hidden lg:block rounded-3xl shadow-2xl w-full lg:h-[500px] object-cover ring-2 ring-gold/40" />
-                  <p className="text-center text-gold font-semibold text-lg mt-4">صناعة السجاد على الطلب والذوق</p>
                 </div>
               </motion.div>
             </div>
