@@ -335,8 +335,8 @@ export default function Home() {
         <img src={siteImages.hero_floating_1} loading="lazy" className="floating-carpet w-32 h-32 object-cover rounded-2xl top-20 right-10 hidden lg:block" style={{ animationDelay: '0s' }} />
         <img src={siteImages.hero_floating_2} loading="lazy" className="floating-carpet w-24 h-24 object-cover rounded-xl bottom-32 left-20 hidden lg:block" style={{ animationDelay: '2s' }} />
 
-        <div className="relative z-10 min-h-screen flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-32">
+        <div className="relative z-10 flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6 sm:py-16 lg:py-32">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="order-2 lg:order-1">
                 <div className="section-badge hidden sm:flex">
@@ -408,7 +408,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-16 sm:py-24 bg-[var(--bg-main)] overflow-hidden">
+      <section id="about" className="py-10 sm:py-20 bg-[var(--bg-main)] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
@@ -443,7 +443,7 @@ export default function Home() {
       </section>
 
       {/* PRODUCTS SECTION */}
-      <section id="products" className="py-24 bg-[var(--bg-secondary)]">
+      <section id="products" className="py-10 sm:py-20 bg-[var(--bg-secondary)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <div className="section-badge mx-auto"><Star className="w-4 h-4" /><span>تشكيلتنا المميزة</span></div>
@@ -496,7 +496,7 @@ export default function Home() {
       </section>
 
       {/* GALLERY SECTION */}
-      <section id="gallery" className="py-24 bg-[var(--bg-main)]">
+      <section id="gallery" className="py-10 sm:py-20 bg-[var(--bg-main)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <div className="section-badge mx-auto"><Star className="w-4 h-4" /><span>معرض الصور</span></div>
@@ -516,7 +516,7 @@ export default function Home() {
       </section>
 
       {/* VIDEO SECTION */}
-      <section id="videos" className="py-24 bg-navy relative overflow-hidden">
+      <section id="videos" className="py-10 sm:py-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"><div className="hero-pattern" /></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
@@ -556,7 +556,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section id="testimonials" className="py-24 bg-[var(--bg-secondary)]">
+      <section id="testimonials" className="py-10 sm:py-20 bg-[var(--bg-secondary)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <div className="section-badge mx-auto"><Users className="w-4 h-4" /><span>آراء عملائنا</span></div>
@@ -578,7 +578,7 @@ export default function Home() {
       </section>
 
       {/* FAQ SECTION */}
-      <section id="faq" className="py-16 sm:py-24 bg-[var(--bg-main)]">
+      <section id="faq" className="py-10 sm:py-20 bg-[var(--bg-main)]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10 sm:mb-16">
             <div className="section-badge mx-auto"><MessageCircle className="w-4 h-4" /><span>الأسئلة الشائعة</span></div>
@@ -605,7 +605,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="py-16 sm:py-24 bg-navy relative overflow-hidden">
+      <section id="contact" className="py-10 sm:py-20 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-5"><div className="hero-pattern" /></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10 sm:mb-16">
