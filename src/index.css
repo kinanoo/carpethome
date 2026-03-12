@@ -70,7 +70,8 @@ img {
 /* ========== LUXURY HERO ========== */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
+  padding-top: 81px;
   overflow: hidden;
 }
 
@@ -489,8 +490,7 @@ img {
   }
 
   .hero-section {
-    min-height: auto;
-    padding-top: 85px;
+    padding-top: 81px;
   }
 
   .luxury-card:hover {
