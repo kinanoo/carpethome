@@ -283,22 +283,6 @@ export default function Home() {
       </nav>
 
 
-
-      {/* BRAND IDENTITY BAR */}
-      <div className="w-full border-b border-gold/20 py-2.5 px-6" style={{background:'rgba(10,22,40,0.97)',backdropFilter:'blur(10px)',position:'fixed',top:'44px',left:0,right:0,zIndex:39}}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <span className="text-white/40 text-xs tracking-[0.25em] uppercase hidden sm:block">Gaziantep · Turkey</span>
-          <div className="flex items-center gap-3">
-            <span style={{display:'inline-block',width:'2rem',height:'1px',background:'rgba(201,162,39,0.5)'}} />
-            <span className="text-gold font-bold tracking-[0.5em] text-xs uppercase">Carpet Home</span>
-            <span className="text-white/30 text-xs">/</span>
-            <span className="text-white font-semibold tracking-[0.35em] text-xs">بيت السجاد</span>
-            <span style={{display:'inline-block',width:'2rem',height:'1px',background:'rgba(201,162,39,0.5)'}} />
-          </div>
-          <span className="text-white/40 text-xs tracking-[0.25em] uppercase hidden sm:block">Est. 2015</span>
-        </div>
-      </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
