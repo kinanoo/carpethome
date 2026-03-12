@@ -385,13 +385,13 @@ export default function Home() {
                     </div>
                   </div>
                   <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="hidden lg:block rounded-3xl shadow-2xl w-full lg:h-[500px] object-cover ring-2 ring-gold/40" />
-                  <div className="absolute -bottom-6 -right-6 glass-card p-4 flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-                      <CheckCircle className="w-6 h-6 text-navy" />
+                  <div className="absolute -bottom-6 -left-6 glass-card p-2 flex items-center gap-2">
+                    <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-navy" />
                     </div>
                     <div>
-                      <div className="text-white font-bold">جودة مضمونة</div>
-                      <div className="text-gray-400 text-sm">ضمان سنتين</div>
+                      <div className="text-white font-bold text-sm">جودة مضمونة</div>
+                      <div className="text-gray-400 text-xs">ضمان سنتين</div>
                     </div>
                   </div>
                 </div>
