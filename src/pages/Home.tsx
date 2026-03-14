@@ -353,11 +353,7 @@ export default function Home() {
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative block order-1 lg:order-2">
                 <div className="relative">
                   <div className="relative lg:hidden">
-                    <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="rounded-2xl shadow-2xl w-full h-[100px] sm:h-[260px] object-cover ring-2 ring-gold/40" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl" style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.5) 100%)'}}>
-                      <span className="text-white font-bold text-sm drop-shadow-lg tracking-wide">كاربت هوم</span>
-                      <span className="text-gold font-semibold text-xs drop-shadow-lg">بيت السجاد</span>
-                    </div>
+                    <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="rounded-2xl shadow-2xl w-full h-[260px] sm:h-[320px] object-cover ring-2 ring-gold/40" />
                   </div>
                   <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="hidden lg:block rounded-3xl shadow-2xl w-full lg:h-[500px] object-cover ring-2 ring-gold/40" />
                 </div>
