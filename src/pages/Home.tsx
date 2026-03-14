@@ -182,10 +182,10 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY
-      // Hide navbar when scrolling down, show when scrolling up
+      // Hide navbar when scrolling down past 80px, show immediately when scrolling up
       if (currentY > lastScrollY && currentY > 80) {
         setIsNavVisible(false)
-      } else {
+      } else if (currentY < lastScrollY) {
         setIsNavVisible(true)
       }
       setLastScrollY(currentY)
@@ -265,7 +265,7 @@ export default function Home() {
           <div className="flex items-center justify-between h-11">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('home')}>
               <img src="/logo.png" alt="كاربت هوم" className="h-8 w-8 rounded-full" />
-              <div className="hidden sm:block">
+              <div>
                 <h1 className="text-white font-bold text-sm">كاربت هوم</h1>
                 <p className="text-gold text-xs">Carpet Home</p>
               </div>
@@ -465,7 +465,7 @@ export default function Home() {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {products.map((product, index) => (
-                <motion.div key={product.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="luxury-card group">
+                <motion.div key={product.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="luxury-card group cursor-pointer" onClick={() => { setSelectedProduct(product); setSelectedImageIndex(0); }}>
                   <div className="product-image-wrapper h-64 relative">
                     {product.images && product.images.length > 0 ? (
                       <Swiper modules={[Autoplay, Pagination]} spaceBetween={0} slidesPerView={1} pagination={{ clickable: true }} autoplay={{ delay: 4000, disableOnInteraction: false }} className="h-full">
