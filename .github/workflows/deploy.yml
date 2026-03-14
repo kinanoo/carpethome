@@ -29,6 +29,9 @@ jobs:
         run: node scripts/optimize-images.js
       - name: Build
         run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
       - name: Copy CNAME to dist
         run: cp CNAME dist/
       - name: Upload artifact
