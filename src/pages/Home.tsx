@@ -75,6 +75,8 @@ const defaultProducts: Product[] = [
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isNavVisible, setIsNavVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const [activeSection, setActiveSection] = useState('home')
   const [selectedProduct, setSelectedProduct] = useState<any>(null)
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
@@ -179,8 +181,16 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-      setShowScrollTop(window.scrollY > 500)
+      const currentY = window.scrollY
+      // Hide navbar when scrolling down, show when scrolling up
+      if (currentY > lastScrollY && currentY > 80) {
+        setIsNavVisible(false)
+      } else {
+        setIsNavVisible(true)
+      }
+      setLastScrollY(currentY)
+      setIsScrolled(currentY > 50)
+      setShowScrollTop(currentY > 500)
       const sections = ['home', 'about', 'products', 'gallery', 'videos', 'testimonials', 'faq', 'contact']
       for (const section of sections) {
         const el = document.getElementById(section)
@@ -250,7 +260,7 @@ export default function Home() {
   return (
     <div className="min-h-screen dark">
       {/* NAVBAR */}
-      <nav className={`navbar ${isScrolled ? 'scrolled' : 'navbar-transparent'}`}>
+      <nav className={`navbar ${isScrolled ? 'scrolled' : 'navbar-transparent'} ${isNavVisible ? 'translate-y-0' : '-translate-y-full'} transition-transform duration-300`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-11">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('home')}>
@@ -297,7 +307,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-4">
                 {navItems.map((item) => (
-                  <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-white/90 text-base font-medium py-3 px-2 border-b border-white/10 text-right hover:text-gold hover:bg-white/5 rounded-lg transition-colors">
+                  <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-white/90 text-sm font-medium py-2 px-3 border-b border-white/10 text-right hover:text-gold hover:bg-white/5 rounded-lg transition-colors">
                     {item.label}
                   </button>
                 ))}
@@ -324,7 +334,7 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 backdrop-blur-[3px]" />
+          <div className="absolute inset-0 backdrop-blur-[2px]" />
           <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, rgba(10,20,50,0.45) 0%, rgba(10,20,50,0.2) 40%, rgba(10,20,50,0.65) 100%)'}} />
         </div>
 
