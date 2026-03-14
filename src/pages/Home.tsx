@@ -311,54 +311,87 @@ export default function Home() {
       </AnimatePresence>
 
       {/* HERO SECTION */}
-      <section id="home" className="hero-section">
-        <div className="hero-bg" />
+      <section id="home" className="hero-section relative overflow-hidden">
+        {/* Full background image for mobile */}
+        <div
+          className="absolute inset-0 lg:hidden"
+          style={{
+            backgroundImage: `url(${siteImages.hero_main})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, rgba(10,20,50,0.55) 0%, rgba(10,20,50,0.3) 40%, rgba(10,20,50,0.75) 100%)'}} />
+        </div>
+
+        {/* Desktop background elements */}
+        <div className="hero-bg hidden lg:block" />
         <div className="hero-pattern" />
         <div className="hero-glow hero-glow-1" />
         <div className="hero-glow hero-glow-2" />
         <img src={siteImages.hero_floating_1} loading="lazy" className="floating-carpet w-32 h-32 object-cover rounded-2xl top-20 right-10 hidden lg:block" style={{ animationDelay: '0s' }} />
         <img src={siteImages.hero_floating_2} loading="lazy" className="floating-carpet w-24 h-24 object-cover rounded-xl bottom-32 left-20 hidden lg:block" style={{ animationDelay: '2s' }} />
 
-        <div className="relative z-10 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8 sm:py-16 lg:py-20">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="order-2 lg:order-1">
-                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
+        <div className="relative z-10 flex items-center min-h-screen lg:min-h-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:py-16 lg:py-20 w-full">
+
+            {/* Mobile layout: full-screen hero with centered content */}
+            <div className="flex flex-col items-center text-center lg:hidden">
+              <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                <h1 className="text-4xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
                   أجود أنواع السجاد
                 </h1>
-                
-                <p className="hidden sm:block text-lg text-gray-300 mb-8 leading-relaxed">
-                  من قلب غازي عنتاب، نقدم لكم أجود أنواع السجاد المصنوع 
-                  بأيدي أمهر الحرفيين، بتصاميم تجمع بين الأصالة والعصرية.
+                <p className="text-base text-gray-200 mb-8 leading-relaxed drop-shadow px-2">
+                  من قلب غازي عنتاب، أجود أنواع السجاد بأيدي أمهر الحرفيين
                 </p>
-
-                <div className="flex flex-wrap gap-3 mb-6 sm:mb-10">
+                <div className="flex flex-wrap justify-center gap-3 mb-10">
                   <button onClick={() => scrollToSection('products')} className="btn-luxury">تصفح المنتجات</button>
                   <button onClick={() => setShowVideo(true)} className="btn-outline flex items-center gap-2">
                     <Play className="w-5 h-5" />
                     شاهد المعمل
                   </button>
                 </div>
-
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-4">
                   {[{ number: '+10', label: 'سنوات خبرة' }, { number: '+500', label: 'عميل سعيد' }, { number: '+200', label: 'تصميم فريد' }].map((stat, i) => (
-                    <div key={i} className="text-center">
-                      <div className="text-xl sm:text-3xl font-bold text-gold">{stat.number}</div>
-                      <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
+                    <div key={i} className="text-center bg-black/30 rounded-xl py-2 px-1 backdrop-blur-sm">
+                      <div className="text-2xl font-bold text-gold">{stat.number}</div>
+                      <div className="text-xs text-gray-300">{stat.label}</div>
                     </div>
                   ))}
                 </div>
               </motion.div>
+            </div>
 
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative block order-1 lg:order-2">
-                <div className="relative">
-                  <div className="relative lg:hidden">
-                    <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="rounded-2xl shadow-2xl w-full h-[260px] sm:h-[320px] object-cover ring-2 ring-gold/40" />
-                  </div>
-                  <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="hidden lg:block rounded-3xl shadow-2xl w-full lg:h-[500px] object-cover ring-2 ring-gold/40" />
+            {/* Desktop layout: two-column grid */}
+            <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="order-2 lg:order-1">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
+                  أجود أنواع السجاد
+                </h1>
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                  من قلب غازي عنتاب، نقدم لكم أجود أنواع السجاد المصنوع بأيدي أمهر الحرفيين، بتصاميم تجمع بين الأصالة والعصرية.
+                </p>
+                <div className="flex flex-wrap gap-3 mb-10">
+                  <button onClick={() => scrollToSection('products')} className="btn-luxury">تصفح المنتجات</button>
+                  <button onClick={() => setShowVideo(true)} className="btn-outline flex items-center gap-2">
+                    <Play className="w-5 h-5" />
+                    شاهد المعمل
+                  </button>
+                </div>
+                <div className="grid grid-cols-3 gap-6">
+                  {[{ number: '+10', label: 'سنوات خبرة' }, { number: '+500', label: 'عميل سعيد' }, { number: '+200', label: 'تصميم فريد' }].map((stat, i) => (
+                    <div key={i} className="text-center">
+                      <div className="text-3xl font-bold text-gold">{stat.number}</div>
+                      <div className="text-sm text-gray-400">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
+              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative order-1 lg:order-2">
+                <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="rounded-3xl shadow-2xl w-full lg:h-[500px] object-cover ring-2 ring-gold/40" />
+              </motion.div>
             </div>
+
           </div>
         </div>
 
