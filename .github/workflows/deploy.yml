@@ -23,6 +23,17 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+      - name: Optimize images
+        run: |
+          npm install -g @squoosh/cli 2>/dev/null || npm install -g sharp-cli
+          for img in public/*.jpg public/*.jpeg; do
+            [ -f "$img" ] || continue
+            sharp --input "$img" --output "$img" --quality 75 --format jpeg
+          done
+          for img in public/*.png; do
+            [ -f "$img" ] || continue
+            sharp --input "$img" --output "$img" --compressionLevel 9 --format png
+          done
       - name: Build
         run: npm run build
       - name: Copy CNAME to dist
