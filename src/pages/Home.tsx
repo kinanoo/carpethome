@@ -324,7 +324,7 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 backdrop-blur-[6px]" />
+          <div className="absolute inset-0 backdrop-blur-[3px]" />
           <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, rgba(10,20,50,0.45) 0%, rgba(10,20,50,0.2) 40%, rgba(10,20,50,0.65) 100%)'}} />
         </div>
 
@@ -341,7 +341,7 @@ export default function Home() {
 
             {/* Mobile layout: full-screen hero with centered content */}
             <div className="flex flex-col items-center text-center lg:hidden">
-              <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+              <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="bg-black/30 backdrop-blur-sm rounded-3xl px-5 py-8 border border-white/10">
                 <h1 className="text-4xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
                   أجود أنواع السجاد
                 </h1>
