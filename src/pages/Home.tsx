@@ -52,25 +52,25 @@ interface VideoItem {
 const defaultGallery = ['/carpet1.jpg', '/carpet2.jpg', '/carpet3.jpg', '/carpet4.jpg', '/carpet5.jpg', '/carpet6.jpg', '/carpet7.jpg', '/carpet8.jpg', '/carpet9.jpg', '/carpet10.jpg', '/carpet11.jpg', '/carpet12.jpg']
 
 const defaultTestimonials = [
-  { id: '1', customer_name: 'Ø£Ø­ÙØ¯ ÙØ­ÙØ¯', customer_country: 'Ø§ÙØ³Ø¹ÙØ¯ÙØ©', rating: 5, content_ar: 'Ø¬ÙØ¯Ø© Ø§Ø³ØªØ«ÙØ§Ø¦ÙØ© ÙØ®Ø¯ÙØ© ÙÙØªØ§Ø²Ø©. Ø§ÙØ³Ø¬Ø§Ø¯ ÙØµÙ Ø¨Ø­Ø§ÙØ© ÙÙØªØ§Ø²Ø© ÙØ¨Ø§ÙØ¶Ø¨Ø· ÙÙØ§ ÙÙ Ø§ÙØµÙØ±.' },
-  { id: '2', customer_name: 'ÙØ§Ø·ÙØ© Ø¹ÙÙ', customer_country: 'Ø§ÙØ¥ÙØ§Ø±Ø§Øª', rating: 5, content_ar: 'Ø£ÙØ¶Ù Ø³Ø¬Ø§Ø¯ Ø§Ø´ØªØ±ÙØªÙ. Ø§ÙØ£ÙÙØ§Ù Ø±Ø§Ø¦Ø¹Ø© ÙØ§ÙØ¬ÙØ¯Ø© Ø¹Ø§ÙÙØ© Ø¬Ø¯Ø§Ù.' },
-  { id: '3', customer_name: 'ÙØ­ÙØ¯ Ø®Ø§ÙØ¯', customer_country: 'Ø§ÙÙÙÙØª', rating: 5, content_ar: 'ØªØ¹Ø§ÙÙ Ø±Ø§ÙÙ ÙØ£Ø³Ø¹Ø§Ø± ÙÙØ§ÙØ³Ø©. Ø£ÙØµØ­ Ø¨Ø§ÙØªØ¹Ø§ÙÙ ÙØ¹ÙÙ Ø¨Ø´Ø¯Ø©.' },
+  { id: '1', customer_name: 'أحمد محمد', customer_country: 'السعودية', rating: 5, content_ar: 'جودة استثنائية وخدمة ممتازة. السجاد وصل بحالة ممتازة وبالضبط كما في الصور.' },
+  { id: '2', customer_name: 'فاطمة علي', customer_country: 'الإمارات', rating: 5, content_ar: 'أفضل سجاد اشتريته. الألوان رائعة والجودة عالية جداً.' },
+  { id: '3', customer_name: 'محمد خالد', customer_country: 'الكويت', rating: 5, content_ar: 'تعامل راقي وأسعار منافسة. أنصح بالتعامل معهم بشدة.' },
 ]
 
 const defaultFaqs = [
-  { id: '1', question_ar: 'ÙØ§ ÙÙ ÙØ¯Ø© Ø§ÙØ´Ø­ÙØ', answer_ar: 'Ø§ÙØ´Ø­Ù ÙØ³ØªØºØ±Ù ÙÙ 7-15 ÙÙÙ Ø¹ÙÙ Ø­Ø³Ø¨ Ø§ÙØ¯ÙÙØ©.' },
-  { id: '2', question_ar: 'ÙÙ ÙÙØ¬Ø¯ Ø¶ÙØ§Ù Ø¹ÙÙ Ø§ÙÙÙØªØ¬Ø§ØªØ', answer_ar: 'ÙØ¹ÙØ Ø¬ÙÙØ¹ ÙÙØªØ¬Ø§ØªÙØ§ ÙØ¶ÙÙÙØ© ÙÙØ¯Ø© Ø³ÙØªÙÙ Ø¶Ø¯ Ø¹ÙÙØ¨ Ø§ÙØµÙØ§Ø¹Ø©.' },
-  { id: '3', question_ar: 'ÙØ§ ÙÙ Ø·Ø±Ù Ø§ÙØ¯ÙØ¹ Ø§ÙÙØªØ§Ø­Ø©Ø', answer_ar: 'ÙÙØ¨Ù Ø§ÙØªØ­ÙÙÙ Ø§ÙØ¨ÙÙÙØ Ø§ÙØ¯ÙØ¹ Ø¹ÙØ¯ Ø§ÙØ§Ø³ØªÙØ§ÙØ ÙØ¨Ø·Ø§ÙØ§Øª Ø§ÙØ§Ø¦ØªÙØ§Ù.' },
-  { id: '4', question_ar: 'ÙÙ ÙÙÙÙ Ø·ÙØ¨ ÙÙØ§Ø³Ø§Øª Ø®Ø§ØµØ©Ø', answer_ar: 'ÙØ¹ÙØ ÙÙÙØ± Ø®Ø¯ÙØ© Ø§ÙØªØµÙÙØ¹ Ø­Ø³Ø¨ Ø§ÙØ·ÙØ¨ Ø¨Ø§ÙÙÙØ§Ø³Ø§Øª Ø§ÙØªÙ ØªØ­ØªØ§Ø¬ÙØ§.' },
+  { id: '1', question_ar: 'ما هي مدة الشحن؟', answer_ar: 'الشحن يستغرق من 7-15 يوم عمل حسب الدولة.' },
+  { id: '2', question_ar: 'هل يوجد ضمان على المنتجات؟', answer_ar: 'نعم، جميع منتجاتنا مضمونة لمدة سنتين ضد عيوب الصناعة.' },
+  { id: '3', question_ar: 'ما هي طرق الدفع المتاحة؟', answer_ar: 'نقبل التحويل البنكي، الدفع عند الاستلام، وبطاقات الائتمان.' },
+  { id: '4', question_ar: 'هل يمكن طلب مقاسات خاصة؟', answer_ar: 'نعم، نوفر خدمة التصنيع حسب الطلب بالمقاسات التي تحتاجها.' },
 ]
 
 const defaultProducts: Product[] = [
-  { id: 'p1', name_ar: 'Ø³Ø¬Ø§Ø¯ ÙÙØ§Ø³ÙÙÙ ÙØ§Ø®Ø±', name_en: 'Classic Luxury Carpet', category: 'ÙÙØ§Ø³ÙÙÙ', is_active: true, images: [{ id: 'i1', image_url: '/carpet1.jpg', is_primary: true }, { id: 'i2', image_url: '/carpet2.jpg', is_primary: false }] },
-  { id: 'p2', name_ar: 'Ø³Ø¬Ø§Ø¯ Ø¹ØµØ±Ù Ø£ÙÙÙ', name_en: 'Modern Elegant Carpet', category: 'Ø¹ØµØ±Ù', is_active: true, images: [{ id: 'i3', image_url: '/carpet3.jpg', is_primary: true }, { id: 'i4', image_url: '/carpet4.jpg', is_primary: false }] },
-  { id: 'p3', name_ar: 'Ø³Ø¬Ø§Ø¯ ØªØ±ÙÙ Ø£ØµÙÙ', name_en: 'Authentic Turkish Carpet', category: 'ØªØ±ÙÙ', is_active: true, images: [{ id: 'i5', image_url: '/carpet5.jpg', is_primary: true }, { id: 'i6', image_url: '/carpet6.jpg', is_primary: false }] },
-  { id: 'p4', name_ar: 'Ø³Ø¬Ø§Ø¯ Ø´Ø±ÙÙ ÙØ²Ø®Ø±Ù', name_en: 'Oriental Ornate Carpet', category: 'Ø´Ø±ÙÙ', is_active: true, images: [{ id: 'i7', image_url: '/carpet7.jpg', is_primary: true }, { id: 'i8', image_url: '/carpet8.jpg', is_primary: false }] },
-  { id: 'p5', name_ar: 'Ø³Ø¬Ø§Ø¯ ÙØ§Ø±Ø³Ù Ø±Ø§ÙÙ', name_en: 'Premium Persian Carpet', category: 'ÙØ§Ø±Ø³Ù', is_active: true, images: [{ id: 'i9', image_url: '/carpet9.jpg', is_primary: true }, { id: 'i10', image_url: '/carpet10.jpg', is_primary: false }] },
-  { id: 'p6', name_ar: 'Ø³Ø¬Ø§Ø¯ ÙØ®ÙÙ ÙØ§Ø®Ø±', name_en: 'Luxury Velvet Carpet', category: 'ÙØ®ÙÙ', is_active: true, images: [{ id: 'i11', image_url: '/carpet11.jpg', is_primary: true }, { id: 'i12', image_url: '/carpet12.jpg', is_primary: false }] },
+  { id: 'p1', name_ar: 'سجاد كلاسيكي فاخر', name_en: 'Classic Luxury Carpet', category: 'كلاسيكي', is_active: true, images: [{ id: 'i1', image_url: '/carpet1.jpg', is_primary: true }, { id: 'i2', image_url: '/carpet2.jpg', is_primary: false }] },
+  { id: 'p2', name_ar: 'سجاد عصري أنيق', name_en: 'Modern Elegant Carpet', category: 'عصري', is_active: true, images: [{ id: 'i3', image_url: '/carpet3.jpg', is_primary: true }, { id: 'i4', image_url: '/carpet4.jpg', is_primary: false }] },
+  { id: 'p3', name_ar: 'سجاد تركي أصيل', name_en: 'Authentic Turkish Carpet', category: 'تركي', is_active: true, images: [{ id: 'i5', image_url: '/carpet5.jpg', is_primary: true }, { id: 'i6', image_url: '/carpet6.jpg', is_primary: false }] },
+  { id: 'p4', name_ar: 'سجاد شرقي مزخرف', name_en: 'Oriental Ornate Carpet', category: 'شرقي', is_active: true, images: [{ id: 'i7', image_url: '/carpet7.jpg', is_primary: true }, { id: 'i8', image_url: '/carpet8.jpg', is_primary: false }] },
+  { id: 'p5', name_ar: 'سجاد فارسي راقي', name_en: 'Premium Persian Carpet', category: 'فارسي', is_active: true, images: [{ id: 'i9', image_url: '/carpet9.jpg', is_primary: true }, { id: 'i10', image_url: '/carpet10.jpg', is_primary: false }] },
+  { id: 'p6', name_ar: 'سجاد مخمل فاخر', name_en: 'Luxury Velvet Carpet', category: 'مخمل', is_active: true, images: [{ id: 'i11', image_url: '/carpet11.jpg', is_primary: true }, { id: 'i12', image_url: '/carpet12.jpg', is_primary: false }] },
 ]
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -241,14 +241,14 @@ export default function Home() {
   }
 
   const navItems = [
-    { id: 'home', label: 'Ø§ÙØ±Ø¦ÙØ³ÙØ©' },
-    { id: 'about', label: 'ÙÙ ÙØ­Ù' },
-    { id: 'products', label: 'ÙÙØªØ¬Ø§ØªÙØ§' },
-    { id: 'gallery', label: 'Ø§ÙÙØ¹Ø±Ø¶' },
-    { id: 'videos', label: 'ÙÙØ¯ÙÙÙØ§Øª' },
-    { id: 'testimonials', label: 'Ø¢Ø±Ø§Ø¡ Ø§ÙØ¹ÙÙØ§Ø¡' },
-    { id: 'faq', label: 'Ø§ÙØ£Ø³Ø¦ÙØ© Ø§ÙØ´Ø§Ø¦Ø¹Ø©' },
-    { id: 'contact', label: 'ØªÙØ§ØµÙ ÙØ¹ÙØ§' },
+    { id: 'home', label: 'الرئيسية' },
+    { id: 'about', label: 'من نحن' },
+    { id: 'products', label: 'منتجاتنا' },
+    { id: 'gallery', label: 'المعرض' },
+    { id: 'videos', label: 'فيديوهات' },
+    { id: 'testimonials', label: 'آراء العملاء' },
+    { id: 'faq', label: 'الأسئلة الشائعة' },
+    { id: 'contact', label: 'تواصل معنا' },
   ]
 
   // Helper function to convert YouTube URL to embed URL
@@ -264,9 +264,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-11">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('home')}>
-              <img src="/logo.png" alt="ÙØ§Ø±Ø¨Øª ÙÙÙ" className="h-8 w-8 rounded-full" />
+              <img src="/logo.png" alt="كاربت هوم" className="h-8 w-8 rounded-full" />
               <div>
-                <h1 className="text-white font-bold text-sm">ÙØ§Ø±Ø¨Øª ÙÙÙ</h1>
+                <h1 className="text-white font-bold text-sm">كاربت هوم</h1>
                 <p className="text-gold text-xs">Carpet Home</p>
               </div>
             </motion.div>
@@ -282,7 +282,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <a href="tel:+905550200911" className="flex items-center gap-1 px-2.5 py-1 bg-gold text-navy rounded-full text-xs font-semibold hover:bg-gold-light transition-colors">
                 <Phone className="w-3 h-3" />
-                <span>Ø§ØªØµÙ</span>
+                <span>اتصل</span>
               </a>
               <button onClick={() => setIsMenuOpen(true)} className="lg:hidden p-2 text-white">
                 <Menu className="w-6 h-6" />
@@ -301,7 +301,7 @@ export default function Home() {
               <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2">
                   <img src="/logo.png" alt="Logo" className="h-8 w-8 rounded-full" />
-                  <div><p className="text-white font-bold text-sm">ÙØ§Ø±Ø¨Øª ÙÙÙ</p><p className="text-gold text-xs">Carpet Home</p></div>
+                  <div><p className="text-white font-bold text-sm">كاربت هوم</p><p className="text-gold text-xs">Carpet Home</p></div>
                 </div>
                 <button onClick={() => setIsMenuOpen(false)} className="text-white/70 hover:text-white"><X className="w-6 h-6" /></button>
               </div>
@@ -353,20 +353,20 @@ export default function Home() {
             <div className="flex flex-col items-center text-center lg:hidden">
               <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="bg-black/30 backdrop-blur-sm rounded-3xl px-5 py-8 border border-white/10">
                 <h1 className="text-4xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
-                  Ø£Ø¬ÙØ¯ Ø£ÙÙØ§Ø¹ Ø§ÙØ³Ø¬Ø§Ø¯
+                  أجود أنواع السجاد
                 </h1>
                 <p className="text-base text-gray-200 mb-8 leading-relaxed drop-shadow px-2">
-                  ÙÙ ÙÙØ¨ ØºØ§Ø²Ù Ø¹ÙØªØ§Ø¨Ø Ø£Ø¬ÙØ¯ Ø£ÙÙØ§Ø¹ Ø§ÙØ³Ø¬Ø§Ø¯ Ø¨Ø£ÙØ¯Ù Ø£ÙÙØ± Ø§ÙØ­Ø±ÙÙÙÙ
+                  من قلب غازي عنتاب، أجود أنواع السجاد بأيدي أمهر الحرفيين
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 mb-10">
-                  <button onClick={() => scrollToSection('products')} className="btn-luxury">ØªØµÙØ­ Ø§ÙÙÙØªØ¬Ø§Øª</button>
+                  <button onClick={() => scrollToSection('products')} className="btn-luxury">تصفح المنتجات</button>
                   <button onClick={() => setShowVideo(true)} className="btn-outline flex items-center gap-2">
                     <Play className="w-5 h-5" />
-                    Ø´Ø§ÙØ¯ Ø§ÙÙØ¹ÙÙ
+                    شاهد المعمل
                   </button>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
-                  {[{ number: '+10', label: 'Ø³ÙÙØ§Øª Ø®Ø¨Ø±Ø©' }, { number: '+500', label: 'Ø¹ÙÙÙ Ø³Ø¹ÙØ¯' }, { number: '+200', label: 'ØªØµÙÙÙ ÙØ±ÙØ¯' }].map((stat, i) => (
+                  {[{ number: '+10', label: 'سنوات خبرة' }, { number: '+500', label: 'عميل سعيد' }, { number: '+200', label: 'تصميم فريد' }].map((stat, i) => (
                     <div key={i} className="text-center bg-black/30 rounded-xl py-2 px-1 backdrop-blur-sm">
                       <div className="text-2xl font-bold text-gold">{stat.number}</div>
                       <div className="text-xs text-gray-300">{stat.label}</div>
@@ -380,20 +380,20 @@ export default function Home() {
             <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="order-2 lg:order-1">
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
-                  Ø£Ø¬ÙØ¯ Ø£ÙÙØ§Ø¹ Ø§ÙØ³Ø¬Ø§Ø¯
+                  أجود أنواع السجاد
                 </h1>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  ÙÙ ÙÙØ¨ ØºØ§Ø²Ù Ø¹ÙØªØ§Ø¨Ø ÙÙØ¯Ù ÙÙÙ Ø£Ø¬ÙØ¯ Ø£ÙÙØ§Ø¹ Ø§ÙØ³Ø¬Ø§Ø¯ Ø§ÙÙØµÙÙØ¹ Ø¨Ø£ÙØ¯Ù Ø£ÙÙØ± Ø§ÙØ­Ø±ÙÙÙÙØ Ø¨ØªØµØ§ÙÙÙ ØªØ¬ÙØ¹ Ø¨ÙÙ Ø§ÙØ£ØµØ§ÙØ© ÙØ§ÙØ¹ØµØ±ÙØ©.
+                  من قلب غازي عنتاب، نقدم لكم أجود أنواع السجاد المصنوع بأيدي أمهر الحرفيين، بتصاميم تجمع بين الأصالة والعصرية.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-10">
-                  <button onClick={() => scrollToSection('products')} className="btn-luxury">ØªØµÙØ­ Ø§ÙÙÙØªØ¬Ø§Øª</button>
+                  <button onClick={() => scrollToSection('products')} className="btn-luxury">تصفح المنتجات</button>
                   <button onClick={() => setShowVideo(true)} className="btn-outline flex items-center gap-2">
                     <Play className="w-5 h-5" />
-                    Ø´Ø§ÙØ¯ Ø§ÙÙØ¹ÙÙ
+                    شاهد المعمل
                   </button>
                 </div>
                 <div className="grid grid-cols-3 gap-6">
-                  {[{ number: '+10', label: 'Ø³ÙÙØ§Øª Ø®Ø¨Ø±Ø©' }, { number: '+500', label: 'Ø¹ÙÙÙ Ø³Ø¹ÙØ¯' }, { number: '+200', label: 'ØªØµÙÙÙ ÙØ±ÙØ¯' }].map((stat, i) => (
+                  {[{ number: '+10', label: 'سنوات خبرة' }, { number: '+500', label: 'عميل سعيد' }, { number: '+200', label: 'تصميم فريد' }].map((stat, i) => (
                     <div key={i} className="text-center">
                       <div className="text-3xl font-bold text-gold">{stat.number}</div>
                       <div className="text-sm text-gray-400">{stat.label}</div>
@@ -402,7 +402,7 @@ export default function Home() {
                 </div>
               </motion.div>
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative order-1 lg:order-2">
-                <img src={siteImages.hero_main} alt="Ø³Ø¬Ø§Ø¯ ÙØ§Ø®Ø±" loading="lazy" className="rounded-3xl shadow-2xl w-full lg:h-[500px] object-cover ring-2 ring-gold/40" />
+                <img src={siteImages.hero_main} alt="سجاد فاخر" loading="lazy" className="rounded-3xl shadow-2xl w-full lg:h-[500px] object-cover ring-2 ring-gold/40" />
               </motion.div>
             </div>
 
@@ -421,25 +421,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
-              <img src={siteImages.about_main} alt="ÙØ¹ÙÙ Ø§ÙØ³Ø¬Ø§Ø¯" loading="lazy" className="rounded-3xl shadow-xl w-full h-[300px] sm:h-[400px] object-cover" />
+              <img src={siteImages.about_main} alt="معمل السجاد" loading="lazy" className="rounded-3xl shadow-xl w-full h-[300px] sm:h-[400px] object-cover" />
               <div className="absolute -bottom-3 right-3 bg-gold text-navy p-2 px-3 rounded-xl shadow-xl">
                 <div className="text-lg font-bold">+10</div>
-                <div className="text-xs font-semibold">Ø³ÙÙØ§Øª ÙÙ Ø§ÙØªÙÙØ²</div>
+                <div className="text-xs font-semibold">سنوات من التميز</div>
               </div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="mt-8 lg:mt-0">
-              <div className="section-badge"><Globe className="w-4 h-4" /><span>ÙÙ ÙØ­Ù</span></div>
-              <h2 className="section-title">Ø±ÙØ§Ø¯ ØµÙØ§Ø¹Ø© <span>Ø§ÙØ³Ø¬Ø§Ø¯ Ø¨ÙÙ Ø£Ø´ÙØ§ÙÙ ÙØªØµØ§ÙÙÙÙ</span></h2>
+              <div className="section-badge"><Globe className="w-4 h-4" /><span>من نحن</span></div>
+              <h2 className="section-title">رواد صناعة <span>السجاد بكل أشكاله وتصاميمه</span></h2>
               <p className="text-[var(--text-secondary)] text-base sm:text-lg leading-relaxed mb-6">
-                ÙÙØ° Ø¹Ø§Ù 2015Ø ÙÙØ­Ù ÙØµÙØ¹ Ø£Ø¬ÙØ¯ Ø£ÙÙØ§Ø¹ Ø§ÙØ³Ø¬Ø§Ø¯ ÙÙØµØ¯Ø±Ù ÙÙØ¹Ø§ÙÙ ÙÙØ±ÙÙ Ø¹ÙØ§ 
-                Ø§ÙØ­ÙØ§ÙØ© ÙÙÙÙÙ Ø§ÙØªØµÙÙÙ ÙØ§ÙØ¬ÙØ¯Ø© Ø§ÙØ§Ø³Ù Ø§ÙØ°Ù ÙØ³ÙÙ Ø¨ÙØ§.
+                منذ عام 2015، ونحن نصنع أجود أنواع السجاد ونصدره للعالم ليروي عنا 
+                الحكاية ويكون التصميم والجودة الاسم الذي يسمو بنا.
               </p>
               <p className="text-[var(--text-secondary)] leading-relaxed mb-8">
-                ÙØ¬ÙØ¹ Ø¨ÙÙ Ø§ÙØ­Ø±ÙÙØ© Ø§ÙØªÙÙÙØ¯ÙØ© ÙØ§ÙØªÙÙÙØ§Øª Ø§ÙØ­Ø¯ÙØ«Ø© ÙÙÙØ¯Ù ÙÙÙ Ø³Ø¬Ø§Ø¯Ø§Ù ÙØ¬ÙØ¹ Ø¨ÙÙ Ø§ÙØ¬ÙØ§Ù ÙØ§ÙØ¬ÙØ¯Ø© ÙØ§ÙÙØªØ§ÙØ©.
+                نجمع بين الحرفية التقليدية والتقنيات الحديثة لنقدم لكم سجاداً يجمع بين الجمال والجودة والمتانة.
               </p>
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                {[{ icon: Shield, text: 'Ø¶ÙØ§Ù Ø§ÙØ¬ÙØ¯Ø©' }, { icon: Truck, text: 'Ø´Ø­Ù Ø¯ÙÙÙ' }].map((item, i) => (
+                {[{ icon: Shield, text: 'ضمان الجودة' }, { icon: Truck, text: 'شحن دولي' }].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 sm:gap-3 p-3 sm:p-4 bg-[var(--bg-secondary)] rounded-xl">
                     <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-gold flex-shrink-0" />
                     <span className="font-semibold text-sm sm:text-base text-[var(--text-main)]">{item.text}</span>
@@ -455,13 +455,13 @@ export default function Home() {
       <section id="products" className="py-10 sm:py-20 bg-[var(--bg-secondary)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <div className="section-badge mx-auto"><Star className="w-4 h-4" /><span>ØªØ´ÙÙÙØªÙØ§ Ø§ÙÙÙÙØ²Ø©</span></div>
-            <h2 className="section-title">Ø§ÙØªØ´Ù <span>ÙÙØªØ¬Ø§ØªÙØ§</span></h2>
-            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">ÙØ¬ÙÙØ¹Ø© ÙØªÙÙØ¹Ø© ÙÙ Ø£ÙØ®Ø± Ø£ÙÙØ§Ø¹ Ø§ÙØ³Ø¬Ø§Ø¯ Ø¨ØªØµØ§ÙÙÙ Ø¹ØµØ±ÙØ© ÙÙÙØ§Ø³ÙÙÙØ©</p>
+            <div className="section-badge mx-auto"><Star className="w-4 h-4" /><span>تشكيلتنا المميزة</span></div>
+            <h2 className="section-title">اكتشف <span>منتجاتنا</span></h2>
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">مجموعة متنوعة من أفخر أنواع السجاد بتصاميم عصرية وكلاسيكية</p>
           </motion.div>
 
           {products.length === 0 ? (
-            <div className="text-center py-12 text-[var(--text-secondary)]">Ø¬Ø§Ø±Ù ØªØ­ÙÙÙ Ø§ÙÙÙØªØ¬Ø§Øª...</div>
+            <div className="text-center py-12 text-[var(--text-secondary)]">جاري تحميل المنتجات...</div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {products.map((product, index) => (
@@ -476,17 +476,17 @@ export default function Home() {
                         ))}
                       </Swiper>
                     ) : (
-                      <div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-500">ÙØ§ ØªÙØ¬Ø¯ ØµÙØ±Ø©</div>
+                      <div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-500">لا توجد صورة</div>
                     )}
                     {product.images && product.images.length > 1 && (
-                      <div className="absolute top-3 left-3 z-10 bg-black/60 text-white text-xs px-2 py-1 rounded-full">{product.images.length} ØµÙØ±</div>
+                      <div className="absolute top-3 left-3 z-10 bg-black/60 text-white text-xs px-2 py-1 rounded-full">{product.images.length} صور</div>
                     )}
                     <div className="product-overlay flex items-end p-6">
-                      <button onClick={() => { setSelectedProduct(product); setSelectedImageIndex(0); }} className="btn-luxury w-full text-center">Ø¹Ø±Ø¶ Ø§ÙØªÙØ§ØµÙÙ</button>
+                      <button onClick={() => { setSelectedProduct(product); setSelectedImageIndex(0); }} className="btn-luxury w-full text-center">عرض التفاصيل</button>
                     </div>
                   </div>
                   <div className="p-6">
-                    <span className="text-gold text-sm font-semibold">{product.category || 'Ø³Ø¬Ø§Ø¯'}</span>
+                    <span className="text-gold text-sm font-semibold">{product.category || 'سجاد'}</span>
                     <h3 className="text-xl font-bold text-[var(--text-main)] mt-1">{product.name_ar}</h3>
                     <p className="text-[var(--text-muted)] text-sm mt-1">{product.name_en}</p>
                   </div>
@@ -498,7 +498,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mt-12">
             <a href="https://wa.me/905550200911" target="_blank" rel="noopener noreferrer" className="btn-luxury inline-flex items-center gap-2">
               <MessageCircle className="w-5 h-5" />
-              Ø§Ø·ÙØ¨ Ø§ÙØ¢Ù Ø¹Ø¨Ø± ÙØ§ØªØ³Ø§Ø¨
+              اطلب الآن عبر واتساب
             </a>
           </motion.div>
         </div>
@@ -508,14 +508,14 @@ export default function Home() {
       <section id="gallery" className="py-10 sm:py-20 bg-[var(--bg-main)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <div className="section-badge mx-auto"><Star className="w-4 h-4" /><span>ÙØ¹Ø±Ø¶ Ø§ÙØµÙØ±</span></div>
-            <h2 className="section-title">Ø´Ø§ÙØ¯ <span>Ø±ÙØ§Ø¦Ø¹ÙØ§</span></h2>
+            <div className="section-badge mx-auto"><Star className="w-4 h-4" /><span>معرض الصور</span></div>
+            <h2 className="section-title">شاهد <span>روائعنا</span></h2>
           </motion.div>
 
           <Swiper modules={[Autoplay, Pagination, Navigation, Keyboard]} spaceBetween={20} slidesPerView={1} breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1280: { slidesPerView: 4 } }} autoplay={{ delay: 3000, pauseOnMouseEnter: true }} pagination={{ clickable: true }} navigation keyboard={{ enabled: true }} watchSlidesProgress={true} className="pb-12">
             {gallery.map((img, i) => (
               <SwiperSlide key={i}>
-                <motion.div whileHover={{ scale: 1.02 }} className="cursor-pointer" onClick={() => { setSelectedProduct({ id: '0', name_ar: 'Ø§ÙÙØ¹Ø±Ø¶', name_en: 'Gallery', images: gallery.map(g => ({ image_url: g })), category: '' }); setSelectedImageIndex(i); }}>
+                <motion.div whileHover={{ scale: 1.02 }} className="cursor-pointer" onClick={() => { setSelectedProduct({ id: '0', name_ar: 'المعرض', name_en: 'Gallery', images: gallery.map(g => ({ image_url: g })), category: '' }); setSelectedImageIndex(i); }}>
                   <img src={img} alt={`Gallery ${i + 1}`} loading="lazy" className="w-full h-72 object-cover rounded-2xl" />
                 </motion.div>
               </SwiperSlide>
@@ -529,15 +529,15 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10"><div className="hero-pattern" /></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <div className="section-badge mx-auto"><Play className="w-4 h-4" /><span>Ø´Ø§ÙØ¯ ÙØ¹ÙÙÙØ§</span></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Ø¬ÙÙØ© ÙÙ <span className="text-gold">ÙØ¹ÙÙ Ø§ÙØ¥ÙØªØ§Ø¬</span></h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Ø´Ø§ÙØ¯ ÙÙÙ ÙØµÙØ¹ Ø£Ø¬ÙØ¯ Ø£ÙÙØ§Ø¹ Ø§ÙØ³Ø¬Ø§Ø¯ Ø¨Ø£ÙØ¯Ù Ø£ÙÙØ± Ø§ÙØ­Ø±ÙÙÙÙ</p>
+            <div className="section-badge mx-auto"><Play className="w-4 h-4" /><span>شاهد معملنا</span></div>
+            <h2 className="text-4xl font-bold text-white mb-4">جولة في <span className="text-gold">معمل الإنتاج</span></h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">شاهد كيف نصنع أجود أنواع السجاد بأيدي أمهر الحرفيين</p>
           </motion.div>
           
           {videos.length === 0 ? (
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video bg-navy-light">
-                <iframe src="https://www.youtube.com/embed/DSyyQwGNQ-Q" title="ÙØ¹ÙÙ Ø§ÙØ³Ø¬Ø§Ø¯" className="absolute inset-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                <iframe src="https://www.youtube.com/embed/DSyyQwGNQ-Q" title="معمل السجاد" className="absolute inset-0 w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
               </div>
             </motion.div>
           ) : videos.length === 1 ? (
@@ -568,8 +568,8 @@ export default function Home() {
       <section id="testimonials" className="py-10 sm:py-20 bg-[var(--bg-secondary)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <div className="section-badge mx-auto"><Users className="w-4 h-4" /><span>Ø¢Ø±Ø§Ø¡ Ø¹ÙÙØ§Ø¦ÙØ§</span></div>
-            <h2 className="section-title">ÙØ§Ø°Ø§ ÙÙÙÙ <span>Ø¹ÙÙØ§Ø¤ÙØ§</span></h2>
+            <div className="section-badge mx-auto"><Users className="w-4 h-4" /><span>آراء عملائنا</span></div>
+            <h2 className="section-title">ماذا يقول <span>عملاؤنا</span></h2>
           </motion.div>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
@@ -590,8 +590,8 @@ export default function Home() {
       <section id="faq" className="py-10 sm:py-20 bg-[var(--bg-main)]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10 sm:mb-16">
-            <div className="section-badge mx-auto"><MessageCircle className="w-4 h-4" /><span>Ø§ÙØ£Ø³Ø¦ÙØ© Ø§ÙØ´Ø§Ø¦Ø¹Ø©</span></div>
-            <h2 className="section-title">Ø£Ø³Ø¦ÙØ© <span>ÙØªÙØ±Ø±Ø©</span></h2>
+            <div className="section-badge mx-auto"><MessageCircle className="w-4 h-4" /><span>الأسئلة الشائعة</span></div>
+            <h2 className="section-title">أسئلة <span>متكررة</span></h2>
           </motion.div>
           <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, i) => (
@@ -618,13 +618,13 @@ export default function Home() {
         <div className="absolute inset-0 opacity-5"><div className="hero-pattern" /></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10 sm:mb-16">
-            <div className="section-badge mx-auto"><Mail className="w-4 h-4" /><span>ØªÙØ§ØµÙ ÙØ¹ÙØ§</span></div>
-            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4">ÙØ³Ø¹Ø¯ <span className="text-gold">Ø¨ØªÙØ§ØµÙÙÙ</span></h2>
+            <div className="section-badge mx-auto"><Mail className="w-4 h-4" /><span>تواصل معنا</span></div>
+            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4">نسعد <span className="text-gold">بتواصلكم</span></h2>
           </motion.div>
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
             <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="space-y-4 sm:space-y-6">
-                {[{ icon: MapPin, title: 'Ø§ÙØ¹ÙÙØ§Ù', text: 'BAÅPINAR (ORGANÄ°ZE) OSB MAH. O.S.B. 3.BÃLGE 83318 NOLU CAD. NO: 22 ÅEHÄ°TKAMÄ°L/ GAZÄ°ANTEP' }, { icon: Phone, title: 'Ø§ÙÙØ§ØªÙ', text: '+90 555 020 09 11', href: 'tel:+905550200911' }, { icon: Mail, title: 'Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¥ÙÙØªØ±ÙÙÙ', text: 'carpethome10@gmail.com', href: 'mailto:carpethome10@gmail.com' }].map((item, i) => (
+                {[{ icon: MapPin, title: 'العنوان', text: 'BAŞPINAR (ORGANİZE) OSB MAH. O.S.B. 3.BÖLGE 83318 NOLU CAD. NO: 22 ŞEHİTKAMİL/ GAZİANTEP' }, { icon: Phone, title: 'الهاتف', text: '+90 555 020 09 11', href: 'tel:+905550200911' }, { icon: Mail, title: 'البريد الإلكتروني', text: 'carpethome10@gmail.com', href: 'mailto:carpethome10@gmail.com' }].map((item, i) => (
                   <div key={i} className="flex gap-3 sm:gap-4 p-4 sm:p-6 glass-card rounded-2xl">
                     <div className="w-10 h-10 sm:w-14 sm:h-14 bg-gold/20 rounded-xl flex items-center justify-center flex-shrink-0"><item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-gold" /></div>
                     <div className="min-w-0"><h3 className="font-bold text-white mb-1 text-sm sm:text-base">{item.title}</h3>{item.href ? (<a href={item.href} className="text-gray-400 hover:text-gold transition-colors text-xs sm:text-sm break-all">{item.text}</a>) : (<p className="text-gray-400 text-xs sm:text-sm break-words">{item.text}</p>)}</div>
@@ -636,13 +636,13 @@ export default function Home() {
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="glass-card p-5 sm:p-8 rounded-2xl sm:rounded-3xl">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Ø£Ø±Ø³Ù Ø±Ø³Ø§ÙØªÙ</h3>
-              <form className="space-y-4 sm:space-y-5" onSubmit={(e) => { e.preventDefault(); const msg = `Ø§ÙØ§Ø³Ù: ${formData.name}\nØ§ÙØ¨Ø±ÙØ¯: ${formData.email}\nØ§ÙÙØ§ØªÙ: ${formData.phone}\nØ§ÙØ±Ø³Ø§ÙØ©: ${formData.message}`; window.open('https://wa.me/905550200911?text=' + encodeURIComponent(msg), '_blank'); }}>
-                <input type="text" placeholder="Ø§ÙØ§Ø³Ù Ø§ÙÙØ§ÙÙ" className="input-luxury bg-white/10 border-white/20 text-white placeholder:text-gray-400 text-sm sm:text-base" id="contact-name" id="contact-name" name="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
-                <input type="email" placeholder="Ø§ÙØ¨Ø±ÙØ¯ Ø§ÙØ¥ÙÙØªØ±ÙÙÙ" className="input-luxury bg-white/10 border-white/20 text-white placeholder:text-gray-400 text-sm sm:text-base" id="contact-email" name="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-                <input type="tel" placeholder="Ø±ÙÙ Ø§ÙÙØ§ØªÙ" className="input-luxury bg-white/10 border-white/20 text-white placeholder:text-gray-400 text-sm sm:text-base" id="contact-phone" name="phone" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
-                <textarea placeholder="Ø±Ø³Ø§ÙØªÙ..." rows={3} className="input-luxury bg-white/10 border-white/20 text-white placeholder:text-gray-400 resize-none text-sm sm:text-base" id="contact-message" name="message" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
-                <button type="submit" className="btn-luxury w-full flex items-center justify-center gap-2 text-sm sm:text-base"><Send className="w-4 h-4 sm:w-5 sm:h-5" />Ø¥Ø±Ø³Ø§Ù Ø§ÙØ±Ø³Ø§ÙØ©</button>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">أرسل رسالتك</h3>
+              <form className="space-y-4 sm:space-y-5" onSubmit={(e) => { e.preventDefault(); const msg = `الاسم: ${formData.name}\nالبريد: ${formData.email}\nالهاتف: ${formData.phone}\nالرسالة: ${formData.message}`; window.open('https://wa.me/905550200911?text=' + encodeURIComponent(msg), '_blank'); }}>
+                <input type="text" placeholder="الاسم الكامل" className="input-luxury bg-white/10 border-white/20 text-white placeholder:text-gray-400 text-sm sm:text-base" id="contact-name" id="contact-name" name="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+                <input type="email" placeholder="البريد الإلكتروني" className="input-luxury bg-white/10 border-white/20 text-white placeholder:text-gray-400 text-sm sm:text-base" id="contact-email" name="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                <input type="tel" placeholder="رقم الهاتف" className="input-luxury bg-white/10 border-white/20 text-white placeholder:text-gray-400 text-sm sm:text-base" id="contact-phone" name="phone" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+                <textarea placeholder="رسالتك..." rows={3} className="input-luxury bg-white/10 border-white/20 text-white placeholder:text-gray-400 resize-none text-sm sm:text-base" id="contact-message" name="message" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+                <button type="submit" className="btn-luxury w-full flex items-center justify-center gap-2 text-sm sm:text-base"><Send className="w-4 h-4 sm:w-5 sm:h-5" />إرسال الرسالة</button>
               </form>
             </motion.div>
           </div>
@@ -656,32 +656,32 @@ export default function Home() {
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-3 mb-4">
                 <img src="/logo.png" alt="Logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full" />
-                <div><h3 className="text-white font-bold text-sm sm:text-base">ÙØ§Ø±Ø¨Øª ÙÙÙ</h3><p className="text-gold text-xs sm:text-sm">Carpet Home</p></div>
+                <div><h3 className="text-white font-bold text-sm sm:text-base">كاربت هوم</h3><p className="text-gold text-xs sm:text-sm">Carpet Home</p></div>
               </div>
-              <p className="text-gray-400 text-xs sm:text-sm">ØµÙØ§Ø¹Ø© Ø§ÙØ³Ø¬Ø§Ø¯ Ø§ÙÙØ§Ø®Ø± ÙÙØ° 2015</p>
+              <p className="text-gray-400 text-xs sm:text-sm">صناعة السجاد الفاخر منذ 2015</p>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-3 sm:mb-4 text-sm sm:text-base">Ø±ÙØ§Ø¨Ø· Ø³Ø±ÙØ¹Ø©</h4>
+              <h4 className="text-white font-bold mb-3 sm:mb-4 text-sm sm:text-base">روابط سريعة</h4>
               <ul className="space-y-1 sm:space-y-2">
                 {navItems.slice(0, 4).map((item) => (<li key={item.id}><button onClick={() => scrollToSection(item.id)} className="text-gray-400 hover:text-gold transition-colors text-xs sm:text-sm">{item.label}</button></li>))}
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-3 sm:mb-4 text-sm sm:text-base">ØªÙØ§ØµÙ ÙØ¹ÙØ§</h4>
+              <h4 className="text-white font-bold mb-3 sm:mb-4 text-sm sm:text-base">تواصل معنا</h4>
               <ul className="space-y-1 sm:space-y-2 text-gray-400 text-xs sm:text-sm">
                 <li className="break-all">+90 555 020 09 11</li>
                 <li className="break-all">carpethome10@gmail.com</li>
-                <li>ØºØ§Ø²Ù Ø¹ÙØªØ§Ø¨Ø ØªØ±ÙÙØ§</li>
+                <li>غازي عنتاب، تركيا</li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-3 sm:mb-4 text-sm sm:text-base">ØªØ§Ø¨Ø¹ÙØ§</h4>
+              <h4 className="text-white font-bold mb-3 sm:mb-4 text-sm sm:text-base">تابعنا</h4>
               <div className="flex gap-2 sm:gap-3">
                 {[Facebook, Instagram, Youtube].map((Icon, i) => (<a key={i} href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all"><Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" /></a>))}
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm">Â© {new Date().getFullYear()} ÙØ§Ø±Ø¨Øª ÙÙÙ. Ø¬ÙÙØ¹ Ø§ÙØ­ÙÙÙ ÙØ­ÙÙØ¸Ø©.</div>
+          <div className="border-t border-white/10 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm">© {new Date().getFullYear()} كاربت هوم. جميع الحقوق محفوظة.</div>
         </div>
       </footer>
 
@@ -720,7 +720,7 @@ export default function Home() {
                   ))}
                 </Swiper>
               ) : (
-                <div className="h-full flex items-center justify-center text-gray-500">ÙØ§ ØªÙØ¬Ø¯ ØµÙØ±</div>
+                <div className="h-full flex items-center justify-center text-gray-500">لا توجد صور</div>
               )}
             </div>
 
@@ -741,7 +741,7 @@ export default function Home() {
               </div>
             )}
 
-            <div className="absolute bottom-6 right-6 text-gray-500 text-sm hidden md:block">Ø§Ø³ØªØ®Ø¯Ù Ø§ÙØ£Ø³ÙÙ â â ÙÙØªÙÙÙ | ESC ÙÙØ¥ØºÙØ§Ù</div>
+            <div className="absolute bottom-6 right-6 text-gray-500 text-sm hidden md:block">استخدم الأسهم ← → للتنقل | ESC للإغلاق</div>
           </motion.div>
         )}
       </AnimatePresence>
