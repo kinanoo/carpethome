@@ -250,7 +250,7 @@ export default function Home() {
   return (
     <div className="min-h-screen dark">
       {/* NAVBAR */}
-      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <nav className={`navbar ${isScrolled ? 'scrolled' : 'navbar-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-11">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection('home')}>
@@ -286,22 +286,25 @@ export default function Home() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-navy/95 backdrop-blur-lg z-50 lg:hidden">
-            <div className="flex flex-col h-full p-6">
-              <div className="flex justify-between items-center mb-10">
-                <img src="/logo.png" alt="Logo" className="h-12 w-12 rounded-full" />
-                <button onClick={() => setIsMenuOpen(false)} className="text-white"><X className="w-8 h-8" /></button>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-navy/98 backdrop-blur-xl z-[60] lg:hidden">
+            <div className="flex flex-col h-full px-5 py-4">
+              <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
+                <div className="flex items-center gap-2">
+                  <img src="/logo.png" alt="Logo" className="h-8 w-8 rounded-full" />
+                  <div><p className="text-white font-bold text-sm">كاربت هوم</p><p className="text-gold text-xs">Carpet Home</p></div>
+                </div>
+                <button onClick={() => setIsMenuOpen(false)} className="text-white/70 hover:text-white"><X className="w-6 h-6" /></button>
               </div>
               <div className="flex flex-col gap-4">
                 {navItems.map((item) => (
-                  <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-white text-xl font-semibold py-3 border-b border-white/10 text-right hover:text-gold transition-colors">
+                  <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-white/90 text-base font-medium py-3 px-2 border-b border-white/10 text-right hover:text-gold hover:bg-white/5 rounded-lg transition-colors">
                     {item.label}
                   </button>
                 ))}
               </div>
               <div className="mt-auto">
-                <a href="tel:+905550200911" className="flex items-center justify-center gap-2 w-full py-4 bg-gold text-navy rounded-xl font-bold text-lg">
-                  <Phone className="w-5 h-5" />
+                <a href="tel:+905550200911" className="flex items-center justify-center gap-2 w-full py-3 bg-gold text-navy rounded-xl font-bold text-sm">
+                  <Phone className="w-4 h-4" />
                   <span>+90 555 020 09 11</span>
                 </a>
               </div>
