@@ -346,8 +346,8 @@ export default function Home() {
         <img src={siteImages.hero_floating_1} loading="lazy" className="floating-carpet w-32 h-32 object-cover rounded-2xl top-20 right-10 hidden lg:block" style={{ animationDelay: '0s' }} />
         <img src={siteImages.hero_floating_2} loading="lazy" className="floating-carpet w-24 h-24 object-cover rounded-xl bottom-32 left-20 hidden lg:block" style={{ animationDelay: '2s' }} />
 
-        <div className="relative z-10 flex items-center min-h-screen lg:min-h-0">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:py-16 lg:py-20 w-full">
+        <div className="relative z-10 flex items-center min-h-[55vh] lg:min-h-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:py-16 lg:py-20 w-full">
 
             {/* Mobile layout: full-screen hero with centered content */}
             <div className="flex flex-col items-center text-center lg:hidden">
