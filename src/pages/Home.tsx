@@ -702,7 +702,7 @@ export default function Home() {
       <AnimatePresence>
         {selectedProduct && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center" onClick={() => setSelectedProduct(null)}>
-            <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20">
+            <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20 pointer-events-auto">
               <div className="text-white">
                 <h3 className="font-bold text-xl">{selectedProduct.name_ar || selectedProduct.name}</h3>
                 <p className="text-gray-400 text-sm">{selectedImageIndex + 1} / {(selectedProduct.images?.length || 0)}</p>
@@ -710,9 +710,9 @@ export default function Home() {
               <button onClick={() => setSelectedProduct(null)} className="text-white hover:text-gold p-2"><X className="w-8 h-8" /></button>
             </div>
 
-            <div className="w-full h-full max-w-5xl max-h-[80vh] px-16" onClick={(e) => e.stopPropagation()}>
+            <div className="w-full h-full max-w-5xl max-h-[80vh] px-16 pointer-events-none">
               {selectedProduct.images && selectedProduct.images.length > 0 ? (
-                <Swiper modules={[Navigation, Keyboard, Pagination]} spaceBetween={0} slidesPerView={1} initialSlide={selectedImageIndex} navigation={{ prevEl: '.lightbox-prev', nextEl: '.lightbox-next' }} keyboard={{ enabled: true }} pagination={{ clickable: true, dynamicBullets: true }} onSlideChange={(swiper) => setSelectedImageIndex(swiper.activeIndex)} className="h-full">
+                <Swiper modules={[Navigation, Keyboard, Pagination]} spaceBetween={0} slidesPerView={1} initialSlide={selectedImageIndex} navigation={{ prevEl: '.lightbox-prev', nextEl: '.lightbox-next' }} keyboard={{ enabled: true }} pagination={{ clickable: true, dynamicBullets: true }} onSlideChange={(swiper) => setSelectedImageIndex(swiper.activeIndex)} onClick={(e: any) => e.stopPropagation()} className="h-full pointer-events-auto">
                   {selectedProduct.images.map((img: any, index: number) => (
                     <SwiperSlide key={index} className="flex items-center justify-center">
                       <img src={img.image_url || img} alt={`${selectedProduct.name_ar} ${index + 1}`} loading="lazy" className="max-w-full max-h-full object-contain rounded-2xl" />
@@ -726,13 +726,13 @@ export default function Home() {
 
             {selectedProduct.images && selectedProduct.images.length > 1 && (
               <>
-                <button className="lightbox-prev absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-gold text-white hover:text-navy rounded-full flex items-center justify-center transition-all z-20" onClick={(e) => e.stopPropagation()}><ChevronRight className="w-8 h-8" /></button>
-                <button className="lightbox-next absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-gold text-white hover:text-navy rounded-full flex items-center justify-center transition-all z-20" onClick={(e) => e.stopPropagation()}><ChevronLeft className="w-8 h-8" /></button>
+                <button className="lightbox-prev absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-gold text-white hover:text-navy rounded-full flex items-center justify-center transition-all z-20 pointer-events-auto" onClick={(e) => e.stopPropagation()}><ChevronRight className="w-8 h-8" /></button>
+                <button className="lightbox-next absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/10 hover:bg-gold text-white hover:text-navy rounded-full flex items-center justify-center transition-all z-20 pointer-events-auto" onClick={(e) => e.stopPropagation()}><ChevronLeft className="w-8 h-8" /></button>
               </>
             )}
 
             {selectedProduct.images && selectedProduct.images.length > 1 && (
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20 pointer-events-auto">
                 {selectedProduct.images.map((img: any, index: number) => (
                   <button key={index} onClick={(e) => { e.stopPropagation(); setSelectedImageIndex(index); }} className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${selectedImageIndex === index ? 'border-gold scale-110' : 'border-transparent opacity-60 hover:opacity-100'}`}>
                     <img src={img.image_url || img} alt="" className="w-full h-full object-cover" />
