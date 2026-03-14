@@ -321,7 +321,8 @@ export default function Home() {
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, rgba(10,20,50,0.55) 0%, rgba(10,20,50,0.3) 40%, rgba(10,20,50,0.75) 100%)'}} />
+          <div className="absolute inset-0 backdrop-blur-[2px]" />
+          <div className="absolute inset-0" style={{background: 'linear-gradient(to bottom, rgba(10,20,50,0.45) 0%, rgba(10,20,50,0.2) 40%, rgba(10,20,50,0.65) 100%)'}} />
         </div>
 
         {/* Desktop background elements */}
