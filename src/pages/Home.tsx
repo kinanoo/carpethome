@@ -296,7 +296,7 @@ export default function Home() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-navy/98 backdrop-blur-xl z-[60] lg:hidden">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-navy/98 backdrop-blur-xl z-[200] lg:hidden">
             <div className="flex flex-col h-full px-5 py-4">
               <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2">
