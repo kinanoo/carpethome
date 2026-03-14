@@ -1,31 +1,34 @@
 // Image optimization script - runs during CI/CD build
+// Uses ES module syntax (import) because package.json has "type": "module"
 // Compresses JPG/PNG images in the public folder using sharp
-// Also handles any new images added in the future
 
-const sharp = require('sharp');
-const fs = require('fs');
-const path = require('path');
+import sharp from 'sharp';
+import { readdir, stat, rename } from 'fs/promises';
+import { existsSync, renameSync } from 'fs';
+import { join, extname, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-const PUBLIC_DIR = path.join(__dirname, '..', 'public');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const PUBLIC_DIR = join(__dirname, '..', 'public');
 
 async function optimizeImages() {
-  const files = fs.readdirSync(PUBLIC_DIR);
-  const imageFiles = files.filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f));
+  const files = await readdir(PUBLIC_DIR);
+  const imageFiles = files.filter(f => /\.(jpg|jpeg|png)$/i.test(f));
 
   console.log('Found ' + imageFiles.length + ' image(s) to process...');
 
   for (const file of imageFiles) {
-    const inputPath = path.join(PUBLIC_DIR, file);
-    const ext = path.extname(file).toLowerCase();
+    const inputPath = join(PUBLIC_DIR, file);
+    const ext = extname(file).toLowerCase();
     const tmpPath = inputPath + '.tmp';
 
     try {
-      const stat = fs.statSync(inputPath);
-      const sizeBefore = (stat.size / 1024).toFixed(1);
+      const stats = await stat(inputPath);
+      const sizeBefore = (stats.size / 1024).toFixed(1);
 
       if (ext === '.jpg' || ext === '.jpeg') {
         await sharp(inputPath)
-          .jpeg({ quality: 75, progressive: true, mozjpeg: false })
+          .jpeg({ quality: 75, progressive: true })
           .toFile(tmpPath);
       } else if (ext === '.png') {
         await sharp(inputPath)
@@ -35,12 +38,13 @@ async function optimizeImages() {
         continue;
       }
 
-      const sizeAfter = (fs.statSync(tmpPath).size / 1024).toFixed(1);
-      fs.renameSync(tmpPath, inputPath);
-      console.log(file + ': ' + sizeBefore + 'KB -> ' + sizeAfter + 'KB');
+      const statsAfter = await stat(tmpPath);
+      const sizeAfter = (statsAfter.size / 1024).toFixed(1);
+      renameSync(tmpPath, inputPath);
+      console.log(file + ': ' + sizeBefore + 'KB -> ' + sizeAfter + 'KB (saved ' + (sizeBefore - sizeAfter).toFixed(1) + 'KB)');
     } catch (err) {
       console.error('Error processing ' + file + ':', err.message);
-      if (fs.existsSync(tmpPath)) fs.unlinkSync(tmpPath);
+      if (existsSync(tmpPath)) renameSync(tmpPath, inputPath);
     }
   }
 
