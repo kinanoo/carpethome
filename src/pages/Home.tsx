@@ -76,7 +76,7 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isNavVisible, setIsNavVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const lastScrollYRef = useRef(0)
   const [activeSection, setActiveSection] = useState('home')
   const [selectedProduct, setSelectedProduct] = useState<any>(null)
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
@@ -182,13 +182,13 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY
-      // Hide navbar when scrolling down past 80px, show immediately when scrolling up
-      if (currentY > lastScrollY && currentY > 80) {
+      // Hide navbar when scrolling down past 80px, show INSTANTLY when scrolling up even 1px
+      if (currentY > lastScrollYRef.current && currentY > 80) {
         setIsNavVisible(false)
-      } else if (currentY < lastScrollY) {
+      } else if (currentY < lastScrollYRef.current) {
         setIsNavVisible(true)
       }
-      setLastScrollY(currentY)
+      lastScrollYRef.current = currentY
       setIsScrolled(currentY > 50)
       setShowScrollTop(currentY > 500)
       const sections = ['home', 'about', 'products', 'gallery', 'videos', 'testimonials', 'faq', 'contact']
